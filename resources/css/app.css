@@ -1,0 +1,78 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+
+@theme {
+    --font-sans: 'Plus Jakarta Sans', 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
+/* Custom 3D Flip Card */
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+.transform-style-3d {
+    transform-style: preserve-3d;
+}
+
+.backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+    transform: rotateY(180deg);
+}
+
+/* Voice Recording Wave */
+@keyframes soundwave {
+    0%, 100% {
+        height: 6px;
+    }
+    50% {
+        height: 32px;
+    }
+}
+
+.animate-wave-1 {
+    animation: soundwave 0.8s ease-in-out infinite 0.1s;
+}
+.animate-wave-2 {
+    animation: soundwave 0.9s ease-in-out infinite 0.2s;
+}
+.animate-wave-3 {
+    animation: soundwave 0.7s ease-in-out infinite 0.3s;
+}
+.animate-wave-4 {
+    animation: soundwave 1.0s ease-in-out infinite 0.15s;
+}
+.animate-wave-5 {
+    animation: soundwave 0.85s ease-in-out infinite 0.25s;
+}
+
+/* Custom Scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Glassmorphism accents */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.dark .glass-panel {
+    background: rgba(18, 24, 38, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
